@@ -1,4 +1,30 @@
-/*  Hero Section */
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: #393939;
+  scroll-behavior: smooth;
+}
+
+p {
+  font-size: 1.37rem;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
 .title-background {
   display: flex;
   align-items: center;
@@ -9,9 +35,7 @@
   max-height: 600px;
   background: url("../assets/coffee-circle.jpg") center center/cover;
 }
-
-.title-background__title-box,
-.title-background__title-box-border {
+.title-background__title-box, .title-background__title-box-border {
   min-width: 17.5rem;
   max-width: 18.75rem;
   min-height: 11.25rem;
@@ -24,7 +48,6 @@
   font-weight: 300;
   position: relative;
 }
-
 .title-background__title-box::after {
   content: "";
   display: block;
@@ -34,10 +57,16 @@
   border: 5px solid #5bacc3;
   width: 100%;
   height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
-/* Sub Menu */
 .sub-nav {
+  display: flex;
+  justify-content: center;
   min-width: 100%;
   max-width: 100%;
   background: #393939;
@@ -46,12 +75,6 @@
   text-align: center;
   padding: 1.25rem 0;
 }
-
-/*  Sub Nav */
-.sub-nav__item {
-  display: inline-block;
-}
-
 .sub-nav__link {
   border-left: 4px solid #5bacc3;
   padding: 0 1.25rem;
@@ -60,16 +83,13 @@
   font-size: 1.75rem;
 }
 
-/*  Food descriptions */
 .food-section {
   text-align: center;
   padding-bottom: 20px;
 }
-
 .food-section--light {
   background: #fff0ed;
 }
-
 .food-section--gray {
   background: #f7f7f7;
 }
@@ -77,28 +97,24 @@
   font-size: 3.75rem;
   font-weight: 300;
 }
-
 .food-section__sub-heading {
   font-size: 2.06rem;
   font-weight: 300;
 }
-
-.food-section__main-heading,
-.food-section__sub-heading {
+.food-section__main-heading, .food-section__sub-heading {
   padding-top: 1.25rem;
 }
-
 .food-section__text-container {
   width: 34%;
   margin: 1.25rem auto;
 }
-
 .food-section__description {
   font-style: italic;
 }
-
 .food-section__price {
   color: #5bacc3;
   margin-top: -15px;
   padding-bottom: 1.25rem;
 }
+
+/*# sourceMappingURL=menu.css.map */

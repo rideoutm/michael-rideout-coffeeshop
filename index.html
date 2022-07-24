@@ -15,25 +15,22 @@
 
     <!--  Header/Main Nav -->
     <header>
-      <nav class="paddingTop">
-        <div class="main-navigation">
-          <div class="main-navigation__first-child">
-            <img
-            class="main-navigation__icon"
-            src="./assets/coffee-beans-logo-and-footer.svg"
-            alt="coffee bean logo"
-          />
+      <nav>
+          <div class="main-navigation">            
+            <div class="main-navigation__first-child">
+              <a class="main-navigation__logo-link" href="./index.html">
+                <img
+                  class="main-navigation__icon"
+                  src="./assets/coffee-beans-logo-and-footer.svg"
+                  alt="coffee bean logo"/>            
+                <h2 class="main-navigation__subheading main-navigation__logo-link">nitro</h2>
+              </a>
+            </div>          
           
-           <h2 class="main-navigation__subheading">nitro</h2>
-          </div>          
-          
-          
-          <ul class="main-navigation__list">
-            
+          <ul class="main-navigation__list">            
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="./index.html">ABOUT</a>
-            </li>
-            
+            </li>            
             <li class="main-navigation__item">
               <a class="main-navigation__link" href="./pages/menu.html">MENU</a>
             </li>
@@ -53,7 +50,10 @@
               seeds of berries from certain Coffea species.
             </p>
             <a href="./pages/menu.html">           
-                <button class="hero-section__btn-blue">SHOP NOW</button>         
+                <button class="hero-section__btn-blue">
+                  <div class="hero-section__btn-overlay">SHOP NOW</div> 
+                </button>
+                        
             </a>
           </div>
         </div>
@@ -75,7 +75,7 @@
       <div class="products__flex-container">
         <div class="products__card">
           <img class="products__image"src="./assets/coffeebeans.png" alt="coffee beans" />
-          <div class="products__subFlex noPad">
+          <div class="products__subFlex products__subFlex--adjusted">
             <div  class="products__first-sub-child">
               <h3 class="products__name">Coffee Beans</h3>
               <p class="products__prod-desc">pack of 3</p>
@@ -83,10 +83,7 @@
             <div>
               <p class="products__price--first-child">$19</p>
             </div>
-          </div>
-            
-            
-                  
+          </div>                 
         </div>
     
         <div class="products__card">
@@ -119,7 +116,7 @@
       </div>
    
       <div>
-        <a href="./pages/menu.html"><button class="products__btn-blue">VIEW ALL</button></a>
+        <a href="./pages/menu.html"><button class="products__btn-blue"> <div class="products__btn-overlay">VIEW ALL</div></button></a>
       </div>
     
     </section>
@@ -130,9 +127,17 @@
         <p class="learn-more__description">
         We grow and roast our own beans. Every bean, every cup, every step of the way, we strive for excellence.
         </p>
+        <div class="learn-more__icon-container">
+          <img class="learn-more__icon" src="./assets/planting.svg" alt="">
+          <img class="learn-more__icon" src="./assets/coffee-beans.svg" alt="">
+          <img class="learn-more__icon" src="./assets/coffee-cup.svg" alt="">
+        </div>
         <a href="./pages/menu.html">           
-            <button class="hero-section__btn-blue">Learn More</button>         
+            <button class="learn-more__btn-blue"> <div class="learn-more__btn-overlay">Learn More</div></button>         
         </a>
+      </div>
+      <div class="learn-more__main-image">
+        <img class="learn-more__tilt-can" src="./assets/tiltedcan.png" alt="">
       </div>
     </section>
 
@@ -143,28 +148,39 @@
 
     <!-- Footer Business info -->
     <footer class="business-info">
-      <div class="business-info__address">
-        <h3 class="business-info__headings">Address</h3>
-        <p>503 Broadway Penthouse</p>
-        <p>New York</p>
+      <div class="business-info__bean">
+        <img class="business-info__bean-image1" src="./assets/coffee-beans-logo-and-footer.svg" alt="">
       </div>
-      <div class="business-info__hours">
-        <h3 class="business-info__headings">Hours</h3>
-        <p><span class="business-info__hours-em">Monday - Friday:</span> 9am - 7pm</p>
-        <p><span class="business-info__hours-em">Saturday - Sunday:</span> 10am - 5pm</p>
+  
+      <div class="business-info__container">
+        <div class="business-info__address">
+          <h3 class="business-info__headings">Address</h3>
+          <p>503 Broadway Penthouse</p>
+          <p>New York</p>
+        </div>
+        <div class="business-info__hours">
+          <h3 class="business-info__headings">Hours</h3>
+          <p><span class="business-info__hours-em">Monday - Friday:</span> 9am - 7pm</p>
+          <p><span class="business-info__hours-em">Saturday - Sunday:</span> 10am - 5pm</p>
+        </div>
+        <div class="business-info__social">
+          <h3 class="business-info__headings">Social</h3>
+          <a href="https://www.facebook.com"
+            ><img class="business-info__icon" src="./assets/Facebook-Icon.svg" alt="facebook"
+          /></a>
+          <a href="https://www.yelp.com"
+            ><img class="business-info__icon" src="./assets/Yelp-Icon.svg" alt="yelp"
+          /></a>
+          <a href="https://www.instagram.com"
+            ><img class="business-info__icon" src="./assets/Instagram-Icon.svg" alt="instagram"
+          /></a>
+        </div>
+        <div class="business-info__bean">
+          <img class="business-info__bean-image2" src="./assets/coffee-beans-logo-and-footer.svg" alt="">
+        </div>
       </div>
-      <div class="business-info__social">
-        <h3 class="business-info__headings">Social</h3>
-        <a href="https://www.facebook.com"
-          ><img class="business-info__icon" src="./assets/Facebook-Icon.svg" alt="facebook"
-        /></a>
-        <a href="https://www.yelp.com"
-          ><img class="business-info__icon" src="./assets/Yelp-Icon.svg" alt="yelp"
-        /></a>
-        <a href="https://www.instagram.com"
-          ><img class="business-info__icon" src="./assets/Instagram-Icon.svg" alt="instagram"
-        /></a>
-      </div>
+    
+      
     </footer>
   </body>
 </html>

@@ -4,13 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Open Sans";
   font-weight: 400;
   color: #393939;
+  scroll-behavior: smooth;
 }
 
 p {
   font-size: 1.37rem;
   font-weight: 400;
+}
+a {
+  text-decoration: none;
 }

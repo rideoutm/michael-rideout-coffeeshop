@@ -1,0 +1,418 @@
+// Partials
+
+@use "./partials/global" as *;
+
+// MIXINS
+@mixin border-btn-overlay($top, $left, $border) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: $top;
+  left: $left;
+  border: $border;
+  width: 100%;
+  height: 100%;
+}
+
+@mixin btn-blue() {
+  background: #5bacc3;
+  color: #fff;
+  border: none;
+  font-size: 1.5rem;
+  font-family: "open sans";
+  font-weight: 400;
+  padding: 0.62rem 2.5rem 1.24rem 2.5rem;
+  margin-top: 1.25rem;
+  position: relative;
+  width: 210px;
+  height: 62.55px;
+}
+
+@mixin icon($min-width-rem, $max-width-rem) {
+  min-width: $min-width-rem;
+  max-width: $max-width-rem;
+}
+
+@mixin footer-bean-images($top, $left) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  width: 120px;
+  height: 120px;
+  opacity: 0.3;
+}
+
+// Main navigation
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  background: #fff0ed;
+  text-decoration: none;
+
+  &__logo-link,
+  &__logo-link:visited {
+    color: #393939;
+  }
+
+  &__icon {
+    min-width: 50px;
+    max-width: 120px;
+    padding-left: 20px;
+  }
+
+  &__subheading {
+    font-size: 3.75rem;
+    font-weight: 300;
+    display: inline-block;
+    color: #393939;
+  }
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    padding: 2rem 1.25rem 1.5rem 1.25rem;
+  }
+
+  &__list,
+  &__item {
+    display: inline-block;
+  }
+
+  &__link,
+  &__link--highlighted {
+    font-size: 24px;
+    font-weight: 400;
+    text-decoration: none;
+  }
+
+  &__link,
+  &__link:visited {
+    color: #393939;
+  }
+
+  &__link--highlighted {
+    color: #5bacc3;
+  }
+}
+
+// HERO SECTION
+.hero-section {
+  background: #fff0ed;
+
+  &__intro-card {
+    display: inline-block;
+    width: 25rem;
+    font-size: 1rem;
+    margin-left: 8%;
+    margin-bottom: 10%;
+  }
+
+  &__image {
+    margin: 3% 0 -7% 32%;
+    height: 37.5rem;
+  }
+
+  &__main-header {
+    font-size: 3.75rem;
+    font-weight: 300;
+  }
+
+  &__main-header,
+  &__description {
+    padding-bottom: 1.25rem;
+  }
+
+  &__btn-blue {
+    @include btn-blue();
+    // z-index: 0;
+  }
+
+  &__btn-overlay {
+    @include border-btn-overlay(-10px, -10px, 2px solid #393939);
+  }
+
+  &__btn-overlay:active {
+    @include border-btn-overlay(0px, 0px, 2px solid #393939);
+  }
+}
+
+// Products Section
+.products {
+  text-align: center;
+  background: #f7f7f7;
+
+  &__flex-container {
+    display: inline-flex;
+    justify-content: space-around;
+    width: 75%;
+  }
+
+  &__header {
+    padding: 1.25rem;
+    font-size: 3.75rem;
+    font-weight: 300;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+  &__card,
+  &__card2 {
+    min-width: 22.62rem;
+    max-width: 21.87rem;
+    min-height: 27.5rem;
+    max-height: 28.75rem;
+    box-shadow: 0 5px 9px -1px rgba(0, 0, 0, 0.25);
+    margin: 1.25rem 2.5rem;
+  }
+
+  &__flex-subcard {
+    display: flex;
+    justify-content: space-around;
+    overflow: hidden;
+    height: 30%;
+    background: #fff0ed;
+  }
+
+  &__image {
+    margin: auto;
+  }
+
+  &__name {
+    font-size: 2.06rem;
+    font-weight: 400;
+    background: #fff0ed;
+  }
+
+  &__name,
+  &__price {
+    margin: 0;
+    background: #fff0ed;
+  }
+
+  &__price,
+  &__price--first-child {
+    color: #5bacc3;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 50% 0;
+  }
+
+  &__price--first-child {
+    margin-top: 30%;
+    margin-bottom: 70%;
+  }
+
+  &__subFlex {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #fff0ed;
+    border-radius: 0 0 10px 10px;
+    border: 10px solid transparent;
+  }
+
+  &__subflex--adjusted {
+    padding-bottom: 0;
+  }
+
+  &__btn-blue {
+    @include btn-blue();
+    margin-top: 3.25rem;
+    margin-bottom: 4rem;
+  }
+
+  &__btn-overlay {
+    @include border-btn-overlay(-10px, -10px, 2px solid #393939);
+  }
+
+  &__btn-overlay:active {
+    @include border-btn-overlay(0px, 0px, 2px solid #393939);
+  }
+
+  //   &__btn-blue::after {
+  //     content: "";
+  //     @include border-btn-overlay(-10px, -10px, 2px solid #393939);
+  //   }
+
+  &__first-sub-child {
+    text-align: left;
+  }
+
+  &__prod-desc {
+    color: #909090;
+  }
+}
+
+// Discount Section
+.discount {
+  margin: 7rem 0;
+  width: 100%;
+  text-align: center;
+
+  &__text {
+    box-sizing: content-box;
+    display: inline-block;
+    font-size: 3rem;
+    font-weight: 400;
+    background: #393339;
+    color: #fff;
+    padding: 40px 0;
+    width: 77%;
+    margin: auto;
+
+    animation: pulse 2.5s alternate infinite;
+
+    @keyframes pulse {
+      from {
+        background: #393939;
+      }
+      to {
+        background: #5bacc3;
+      }
+    }
+  }
+}
+
+.learn-more {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+
+  &__left-card {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 27.25rem;
+    font-size: 1rem;
+    margin-left: 8%;
+    margin-top: 100px;
+  }
+
+  &__description {
+    padding: 20px 0;
+  }
+
+  &__main-header {
+    font-size: 3.75rem;
+    font-weight: 300;
+  }
+
+  &__icon-container {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+
+  &__icon {
+    @include icon(3.12rem, 7.5rem);
+    width: 50px;
+    height: 50px;
+  }
+
+  &__btn-blue {
+    @include btn-blue();
+  }
+
+  &__btn-overlay {
+    @include border-btn-overlay(-10px, -10px, 2px solid #393939);
+  }
+
+  &__btn-overlay:active {
+    @include border-btn-overlay(0px, 0px, 2px solid #393939);
+  }
+
+  &__main-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("../assets/coldbrewbackground.png") center center/cover;
+    width: 27.25rem;
+    height: 22.25rem;
+    margin-right: 8%;
+    margin-top: 40px;
+    position: relative;
+  }
+
+  &__main-image::after {
+    content: "";
+    @include border-btn-overlay(-20px, -20px, 4px solid #5bacc3);
+  }
+
+  &__tilt-can {
+    width: 152px;
+    height: 277px;
+    z-index: 1;
+  }
+
+  &__tilt-can:hover {
+    animation: rotation 2s infinite linear;
+
+    @keyframes rotation {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(359deg);
+      }
+    }
+  }
+}
+
+.business-info {
+  background: #fff0ed;
+  position: relative;
+  overflow: hidden;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+    padding-bottom: 60px;
+    padding-top: 20px;
+  }
+
+  &__address,
+  &__hours,
+  &__social {
+    text-align: left;
+  }
+
+  &__headings {
+    text-align: left;
+    padding-top: 1.25rem;
+    margin: 1.25rem 1.25rem 1.25rem 0;
+    font-size: 2.06rem;
+    font-weight: 400;
+  }
+
+  &__hours-em {
+    font-weight: bold;
+  }
+
+  &__icon {
+    @include icon(3.12rem, 7.5rem);
+  }
+
+  &__bean {
+    position: absolute;
+  }
+
+  &__bean-image1 {
+    @include footer-bean-images(20px, -30px);
+  }
+
+  &__bean-image2 {
+    @include footer-bean-images(60px, 1280px);
+  }
+}
